@@ -6,7 +6,6 @@ from itertools import cycle
 from termcolor import cprint
 
 bot = commands.Bot(command_prefix='.')
-status = cycle(['A', 'B', 'C'])
 
 file = open(".token")
 token = file.read().replace("\n", "")
@@ -14,15 +13,8 @@ file.close()
 
 @bot.event
 async def on_ready():
-    change_status.start()
     print(f'[{datetime.datetime.now(tz=datetime.timezone.utc)}]')
     cprint('Bot is online.', 'green')
-
-
-@tasks.loop(seconds=1)
-async def change_status():
-    await bot.change_presence(activity=discord.Game(next(status)))
-
 
 @bot.command(hidden=True)
 async def ld(ctx, extension):

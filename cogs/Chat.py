@@ -14,6 +14,10 @@ class Chat(commands.Cog):
     async def on_message(self, message):
         print(
             f'{log.user(message)}: {message.content}')
+        if len(message.attachments) > 0:
+            for attachment in message.attachments:
+                print(
+                    f'{log.user(message)} attached {attachment.filename} ({attachment.size/1000000} mb)')
 
 
 def setup(bot):

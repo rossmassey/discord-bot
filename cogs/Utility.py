@@ -15,7 +15,7 @@ class Utility(commands.Cog):
         ping = round(self.bot.latency * 1000)
         cprint(
             (f'{log.user(ctx.message)} pinged with {ping} ms'), 'blue')
-        await ctx.send(f'`Response: {ping} ms`')
+        await ctx.send(f'`Bot response: {ping} ms`')
 
     @commands.command(brief='clears [x] lines')
     async def clear(self, ctx, amount=1):
