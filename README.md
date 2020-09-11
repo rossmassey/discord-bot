@@ -1,4 +1,5 @@
 ## Discord Bot
+![Python application](https://github.com/rossmassey/discord-bot/workflows/Python%20application/badge.svg)
 
 Just wanted to see what making a python discord bot would be like
 
