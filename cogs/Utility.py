@@ -10,7 +10,7 @@ class Utility(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(brief='shows your ping')
+    @commands.command(brief='shows bot ping')
     async def ping(self, ctx):
         ping = round(self.bot.latency * 1000)
         cprint(
