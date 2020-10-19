@@ -5,6 +5,17 @@ Just wanted to see what making a python discord bot would be like
 
 Built with Discord.py
 
+## Running
+
+1. Create `.token` file in root of directory with Bot token (from Discord Developer Portal)
+
+2. Run `python3 bot.py`
+
+## Dependencies
+
+- python 3.5+
+- modules: discord, termcolor
+
 ## Cogs
 
 ```
